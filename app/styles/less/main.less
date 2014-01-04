@@ -1,0 +1,112 @@
+@import "fonts.less";
+@import "/bootstrap/bootstrap.less";
+
+@media (max-width: @screen-xs-max) { }
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { }
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { }
+@media (min-width: @screen-lg-min) { }
+
+@blue: #2980B9;
+@green: #16A085;
+@orange: #d35400;
+
+.inner-shadow (@x: 2px, @y: 2px, @blur: 0px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.cover{
+	  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header{
+	padding:25px 0; 
+	h1{
+		font-size: 60px;
+		line-height: 60px;
+		color: #666;
+		margin-bottom: 0;
+		text-align: center;
+		color: @blue;
+		font-family: "cartonslab";
+		@media (max-width: @screen-xs-max) {
+			font-size: 40px;
+			line-height: 40px;
+			margin-bottom: 15px;
+		}
+	}
+	h3{
+		font-size: 30px;
+		color: #BDC3C7;
+		text-align: center;
+		margin-top: 0;
+		font-family: arial;
+		@media (max-width: @screen-xs-max) {
+			font-size: 26px;
+		}
+	}
+}
+section{
+	padding-top: 30px;
+	h2{
+		color: #fff;
+		font-family: "cartonslab";
+		font-size: 45px;
+		margin-bottom: 0;
+		@media (max-width: @screen-xs-max) {
+			font-size: 30px;
+		}
+	}
+	p{
+		color: #fff;
+		font-size: 20px;
+		margin-bottom: 30px;
+	}
+
+	&.me{
+		background: url(../images/me.jpg) no-repeat center 25%;
+		.cover;
+		@media (max-width: @screen-xs-max) {
+			background-position: left center;
+		}
+		min-height:420px;
+		@media (max-width: @screen-xs-max) {
+			h2{
+				margin-bottom: 120px;
+			}
+		}
+	}
+	&.architecture{
+		background: url(../images/escheresque.png) repeat;
+		//.inner-shadow(2px,2px);
+		h2{
+			text-align: center;
+			color: @orange;
+			margin-bottom: 15px;
+		}
+		.fa{
+			display: block;
+			width: 95px;
+			height: 95px;
+			background: #fff;
+			margin: 10px auto 25px;
+			padding: 20px;
+			color: @orange;
+			font-size: 55px;
+			border-radius:50%;
+		}
+		p{
+			text-align: center;
+			font-size: 24px;
+			color: #7F8C8D;
+		}
+	}
+}
+
+
+
+
