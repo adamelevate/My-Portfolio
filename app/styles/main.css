@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
 @font-face {
   font-family: 'cartonslab';
   src: url('../fonts/carton-slab-webfont.eot');
@@ -287,7 +288,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #a3adad;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
 }
 input,
 button,
@@ -325,7 +326,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.428571429;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2658,14 +2659,30 @@ td.visible-print {
     display: none !important;
   }
 }
+.lazy-load,
+.lazy-loaded {
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+.lazy-loaded {
+  opacity: 1;
+}
 .cover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+body {
+  background: url(../images/escheresque.png) repeat;
+}
 header {
   padding: 25px 0;
+  background: #fff;
 }
 header h1 {
   font-size: 60px;
@@ -2757,10 +2774,9 @@ section.architecture .fa {
 section.architecture p {
   text-align: center;
   font-size: 24px;
-  color: #7F8C8D;
+  color: #7f8c8d;
 }
 section.processes {
-  background: url(../images/escheresque.png) repeat;
   padding: 0 0 30px;
 }
 section.processes h2 {
@@ -2771,67 +2787,143 @@ section.processes h2 {
   section.processes .col-xs-3 {
     padding: 0;
   }
+  section.processes .col-xs-3 button {
+    width: 75px;
+    display: block;
+    margin: 0 auto;
+  }
 }
-section.processes button {
+section.processes .process {
   width: 100%;
+  border: none;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-section.processes button .fa {
+section.processes .process .fa {
   display: block;
-  width: 95px;
-  height: 95px;
-  background: transparent;
-  margin: 10px auto 10px;
+  margin: 0px auto;
   padding: 20px;
-  color: #d35400;
+  color: #7f8c8d;
   font-size: 55px;
-  border-radius: 50%;
   -webkit-transition: all 0.25s ease-out;
   -moz-transition: all 0.25s ease-out;
   -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
-section.processes button h3 {
+section.processes .process h3 {
   margin: 0;
   font-weight: bold;
-  color: #d35400;
+  color: #bdc3c7;
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
-section.processes button:hover,
-section.processes button.chosen {
+section.processes .process:hover,
+section.processes .process.chosen {
   background: #d35400;
 }
-section.processes button:hover .fa,
-section.processes button.chosen .fa {
-  background: #fff;
+section.processes .process:hover .fa,
+section.processes .process.chosen .fa {
+  color: #fff;
 }
-section.processes button:hover h3,
-section.processes button.chosen h3 {
+section.processes .process:hover h3,
+section.processes .process.chosen h3 {
   color: #fff;
   margin-top: -7px;
   margin-bottom: 7px;
 }
 @media (max-width: 991px) {
-  section.processes button h3 {
+  section.processes .process h3 {
     display: none;
   }
-  section.processes button .fa {
+  section.processes .process .fa {
     font-size: 35px;
     width: 50px;
     height: 50px;
     padding: 10px 0;
   }
 }
-section.process {
-  background: #a3adad;
+.process-detail {
+  margin-top: 30px;
+  position: relative;
 }
-section.process h2 {
+.process-detail .wrapper {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  padding: 10px 5%;
+  margin: 15px;
+}
+@media (max-width: 991px) {
+  .process-detail .wrapper {
+    margin: 0;
+  }
+}
+.process-detail .story h3 {
+  font-size: 2em;
+  color: #d35400;
+}
+@media (max-width: 991px) {
+  .process-detail .story .mobile-wrapper {
+    position: relative;
+  }
+  .process-detail .story .mobile-wrapper:before {
+    content: "\f065";
+    font-family: FontAwesome;
+    position: absolute;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+    height: 80px;
+    width: 80px;
+    display: block;
+    right: 12%;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 80px;
+    font-size: 45px;
+  }
+}
+.process-detail .story img {
+  width: 100%;
+}
+.process-detail .story p {
+  text-align: left;
+}
+@media (max-width: 991px) {
+  .process-detail .story p {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto 15px auto;
+    display: block;
+  }
+}
+.process-detail .story a {
+  color: #3498db;
+}
+@media (max-width: 991px) {
+  .process-detail .story img {
+    width: 75%;
+    display: block;
+    margin: 15px auto;
+  }
+}
+@media (max-width: 991px) {
+  .process-detail .row > div {
+    padding: 0;
+    margin: 0;
+  }
+}
+.process-detail h3 {
+  color: #555;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 2.5em;
+  text-align: center;
+}
+.process-detail p {
   color: #7f8c8d;
-  font-family: "fairviewregular";
+  text-align: center;
 }

@@ -1,10 +1,19 @@
 @import "fonts.less"; 
 @import "/bootstrap/bootstrap.less";
 
-@media (max-width: @screen-xs-max) { }
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { }
-@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { }
-@media (min-width: @screen-lg-min) { }
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
+.lazy-load, .lazy-loaded {
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.lazy-loaded { opacity: 1; }
+
 
 //@blue: #2980B9;
 //@green: #16A085;
@@ -29,10 +38,13 @@
 }
 
 
-
+body{
+	background: url(../images/escheresque.png) repeat;
+}
 
 header{
 	padding:25px 0; 
+	background: #fff;
 	h1{
 		font-size: 60px;
 		line-height: 60px;
@@ -113,46 +125,47 @@ section{
 		p{
 			text-align: center;
 			font-size: 24px;
-			color: #7F8C8D;
+			color: @asbestos;
 		}
 	}
 	&.processes{
-		background: url(../images/escheresque.png) repeat;
 		padding:0 0 30px;
-		h2{
+		 h2{
 			color: @pumpkin;
 			margin-bottom: 15px;
 		}
 		@media (max-width: @screen-xs-max) {
 			.col-xs-3{
 				padding:0; 
+				button{
+					width: 75px;
+					display: block;
+					margin: 0 auto;
+				}
 			}
 		}
-		button{
+		.process{
 			width: 100%;
+			border: none;
 			.transition(.2s, ease-out);
 			.fa{
 				display: block;
-				width: 95px;
-				height: 95px;
-				background: transparent;
-				margin: 10px auto 10px;
+				margin: 0px auto;
 				padding: 20px;
-				color: @pumpkin;
+				color: @asbestos;
 				font-size: 55px;
-				border-radius:50%;
 				.transition(.25s, ease-out);
 			}
 			h3{
 				margin: 0;
 				font-weight: bold;
-				color: @pumpkin;
+				color: @gray-light;
 				.transition(.5s, ease-out);
 			}
 			&:hover, &.chosen{
 				background: @pumpkin;
 				.fa{
-					background: #fff;
+					color: #fff;
 				}
 				h3{	
 					color: #fff;
@@ -174,15 +187,88 @@ section{
 		}
 
 	}
-	&.process{
-		background:@gray-dark;
-		h2{
-			color: @gray-darker;
-			font-family: "fairviewregular";
-		}
-	}
 }
 
+	.process-detail{
+		margin-top: 30px;
+		position: relative;
+		.wrapper{
+			background: rgba(255,255,255, .5);
+			border-radius: 6px;
+			padding: 10px 5%;
+			margin: 15px;
+			@media (max-width: @screen-sm-max) {
+					margin:0;
+			}
+		}
+		.story{
+			h3{
+				font-size: 2em;
+				color: @pumpkin;
+			}
+			.mobile-wrapper{
+				@media (max-width: @screen-sm-max) {
+					position: relative;
+					&:before{
+						content: "\f065";
+						font-family: FontAwesome;
+						position: absolute;
+						color: #fff;
+						text-shadow: 1px 1px 0 #000;
+						height: 80px;
+						width: 80px;
+						display: block;
+						right: 12%;
+						bottom: 0;
+						background: rgba(0,0,0,.5);
+						text-align: center;
+						line-height: 80px;
+						font-size: 45px;
+					}
+				}
+			}
+			img{
+				width: 100%;
+			}
+			p{
+				text-align: left;
+				@media (max-width: @screen-sm-max) {
+					text-align: center;
+					width: 90%;
+					margin: 0 auto 15px auto;
+					display: block;
+				}
+			}
+			a{
+				color: @peter-river;
+			}
+			@media (max-width: @screen-sm-max) {
+				img{
+					width: 75%;
+					display: block;
+					margin: 15px auto;
+				}
+			}
+		}
+		@media (max-width: @screen-sm-max) {
+			.row > div{
+				padding: 0;
+				margin: 0;
+			}
+		}
+		h3{
+			color: #555;
+			font-family: "Lato";
+			font-weight: 400;
+			font-size: 2.5em;
+			text-align: center;
+		}
+		p{
+			color: @asbestos;
+			text-align: center;
+		}
+
+	}
 
 
 
