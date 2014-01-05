@@ -1,4 +1,4 @@
-@import "fonts.less";
+@import "fonts.less"; 
 @import "/bootstrap/bootstrap.less";
 
 @media (max-width: @screen-xs-max) { }
@@ -6,22 +6,30 @@
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { }
 @media (min-width: @screen-lg-min) { }
 
-@blue: #2980B9;
-@green: #16A085;
-@orange: #d35400;
+//@blue: #2980B9;
+//@green: #16A085;
+//@orange: #d35400;
 
 .inner-shadow (@x: 2px, @y: 2px, @blur: 0px, @spread: 0, @alpha: 0.25) {
 	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
 	-moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
 	box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
 }
-
+.transition(@duration:0.2s, @ease:ease-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  -o-transition: all @duration @ease;
+  transition: all @duration @ease;
+}
 .cover{
 	  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+
+
+
 
 header{
 	padding:25px 0; 
@@ -31,7 +39,7 @@ header{
 		color: #666;
 		margin-bottom: 0;
 		text-align: center;
-		color: @blue;
+		color: @belize-hole;
 		font-family: "cartonslab";
 		@media (max-width: @screen-xs-max) {
 			font-size: 40px;
@@ -60,6 +68,7 @@ section{
 		@media (max-width: @screen-xs-max) {
 			font-size: 30px;
 		}
+		text-align: center;
 	}
 	p{
 		color: #fff;
@@ -70,6 +79,9 @@ section{
 	&.me{
 		background: url(../images/me.jpg) no-repeat center 25%;
 		.cover;
+		h2{
+			text-align: left;
+		}
 		@media (max-width: @screen-xs-max) {
 			background-position: left center;
 		}
@@ -84,8 +96,7 @@ section{
 		background: url(../images/escheresque.png) repeat;
 		//.inner-shadow(2px,2px);
 		h2{
-			text-align: center;
-			color: @orange;
+			color: @pumpkin;
 			margin-bottom: 15px;
 		}
 		.fa{
@@ -95,7 +106,7 @@ section{
 			background: #fff;
 			margin: 10px auto 25px;
 			padding: 20px;
-			color: @orange;
+			color: @pumpkin;
 			font-size: 55px;
 			border-radius:50%;
 		}
@@ -103,6 +114,71 @@ section{
 			text-align: center;
 			font-size: 24px;
 			color: #7F8C8D;
+		}
+	}
+	&.processes{
+		background: url(../images/escheresque.png) repeat;
+		padding:0 0 30px;
+		h2{
+			color: @pumpkin;
+			margin-bottom: 15px;
+		}
+		@media (max-width: @screen-xs-max) {
+			.col-xs-3{
+				padding:0; 
+			}
+		}
+		button{
+			width: 100%;
+			.transition(.2s, ease-out);
+			.fa{
+				display: block;
+				width: 95px;
+				height: 95px;
+				background: transparent;
+				margin: 10px auto 10px;
+				padding: 20px;
+				color: @pumpkin;
+				font-size: 55px;
+				border-radius:50%;
+				.transition(.25s, ease-out);
+			}
+			h3{
+				margin: 0;
+				font-weight: bold;
+				color: @pumpkin;
+				.transition(.5s, ease-out);
+			}
+			&:hover, &.chosen{
+				background: @pumpkin;
+				.fa{
+					background: #fff;
+				}
+				h3{	
+					color: #fff;
+					margin-top: -7px;
+					margin-bottom: 7px; 
+				}
+			}
+			@media (max-width: @screen-sm-max) {
+				h3{
+					display: none;
+				}
+				.fa{
+					font-size: 35px;
+					width:50px;
+					height: 50px;
+					padding:10px 0;
+				}
+			}
+		}
+
+	}
+	&.process{
+		background:@gray-dark;
+		h2{
+			color: @gray-darker;
+			font-family: "fairviewregular";
 		}
 	}
 }

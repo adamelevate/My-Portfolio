@@ -1,1 +1,26 @@
-<p>This is the processes view.</p>
+<section class="processes">
+	<div class="container">
+		<h2>My Processes</h2>
+		<div class="row">
+			<div ng-repeat="process in processes" class="col-xs-3">
+				<button class="btn btn-default" 
+					ng-class="{chosen:(chosen.title == process.title)}" 
+					ng-click="chooseProcess(process)"
+					>
+					<span class="fa {{process.icon}}"></span>
+					<h3>{{process.title}}</h3>
+				</button>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="process" ng-show="chosen != ''">
+	<div class="container">
+	<div class="row" >
+			<div class="col-sm-8 col-sm-offset-2">
+			 <h2>{{chosen.title}}</h2>
+			 <p>{{chosen.description}}</p>
+			</div>
+		</div>
+	</div>
+</section>

@@ -25,16 +25,16 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
     less: {
-        development: {
-          files: {
-            "./app/styles/main.css": ["./app/styles/less/main.less"]
-          }
+      development: {
+        files: {
+          './app/styles/main.css': ['./app/styles/less/main.less']
+        }
       }
     },
     // Watches files for changes and runs tasks based on the changed files
     watch: {
-      less:{
-        files: ['./app/styles/less/main.less'],
+      less: {
+        files: ['./app/styles/less/{,*/}*.less'],
         tasks: ['less']
       },
       js: {
@@ -72,7 +72,7 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost',
+        hostname: '*',
         livereload: 35729
       },
       livereload: {
@@ -156,7 +156,6 @@ module.exports = function (grunt) {
         ignorePath: '<%= yeoman.app %>/'
       }
     },
-
 
 
 
@@ -382,7 +381,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'newer:jshint',
+    //'newer:jshint',
     'test',
     'build'
   ]);
