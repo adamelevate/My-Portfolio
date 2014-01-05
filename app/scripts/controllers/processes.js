@@ -1,17 +1,17 @@
 'use strict';
 
 angular.module('portfolioApp')
-	.controller('ProcessesCtrl', function ($scope) {
+	.controller('ProcessesCtrl', function ($scope, $window) {
 
 		$scope.chosen = '';
-		$scope.imageUrl = '';
 
 		$scope.chooseProcess = function (input) {
 			$scope.chosen = input;
 		};
 
-		$scope.viewFullscreen = function(url){
-			$location.path(url);
+		$scope.viewFullscreen = function(e){
+			$window.location = e.target.attributes[2].nodeValue;
+
 		};
 
 		$scope.processes = [{
@@ -38,9 +38,6 @@ angular.module('portfolioApp')
 
 	}).directive('lazyLoad', function(){
 		return function(scope, element, attrs){
-			console.log(scope);
-			console.log(element);
-			console.log(attrs.srcMobile);
 			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 				element.attr('src', attrs.srcMobile);
 			}

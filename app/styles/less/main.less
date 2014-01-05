@@ -206,14 +206,20 @@ section{
 				font-size: 2em;
 				color: @pumpkin;
 			}
+			h4{
+				text-align: center;
+				color: @pumpkin;
+				font-family: "Lato";
+			}
 			.mobile-wrapper{
-				@media (max-width: @screen-sm-max) {
+				.resize{
+					display: none;
+				}
+				@media (max-width: @screen-xs-max) {
 					position: relative;
-					&:before{
-						content: "\f065";
-						font-family: FontAwesome;
+					.resize{
 						position: absolute;
-						color: #fff;
+						color: @peter-river;
 						text-shadow: 1px 1px 0 #000;
 						height: 80px;
 						width: 80px;

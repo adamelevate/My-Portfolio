@@ -2865,15 +2865,21 @@ section.processes .process.chosen h3 {
   font-size: 2em;
   color: #d35400;
 }
-@media (max-width: 991px) {
+.process-detail .story h4 {
+  text-align: center;
+  color: #d35400;
+  font-family: "Lato";
+}
+.process-detail .story .mobile-wrapper .resize {
+  display: none;
+}
+@media (max-width: 767px) {
   .process-detail .story .mobile-wrapper {
     position: relative;
   }
-  .process-detail .story .mobile-wrapper:before {
-    content: "\f065";
-    font-family: FontAwesome;
+  .process-detail .story .mobile-wrapper .resize {
     position: absolute;
-    color: #fff;
+    color: #3498db;
     text-shadow: 1px 1px 0 #000;
     height: 80px;
     width: 80px;
