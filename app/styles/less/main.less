@@ -48,7 +48,6 @@ header{
 	h1{
 		font-size: 60px;
 		line-height: 60px;
-		color: #666;
 		margin-bottom: 0;
 		text-align: center;
 		color: @belize-hole;
@@ -67,6 +66,39 @@ header{
 		font-family: arial;
 		@media (max-width: @screen-xs-max) {
 			font-size: 26px;
+		}
+	}
+	&.inner{
+		padding: 15px 0;
+		text-align:  center;
+		position: relative;
+		a{
+
+			&:hover{
+				text-decoration: none;
+			}
+			strong{
+				color: @belize-hole;
+				font-family: "cartonslab";
+				font-size: 28px;
+				display: block;
+			}
+			span{
+				color: #BDC3C7;
+				font-size: 20px;
+			}
+		}
+		button{
+			background: transparent;
+			font-size: 2em;
+			position: absolute;
+			right: 5%;
+			color:@gray;
+			border: none;
+			padding:10px;
+			&:hover{
+				color: @peter-river;
+			}
 		}
 	}
 }
@@ -275,6 +307,4 @@ section{
 		}
 
 	}
-
-
 
