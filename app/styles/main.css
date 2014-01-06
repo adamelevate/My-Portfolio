@@ -1760,7 +1760,7 @@ fieldset[disabled] .btn {
 .btn-default {
   color: #333333;
   background-color: #ffffff;
-  border-color: #cccccc;
+  border-color: #bdc3c7;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -1769,7 +1769,7 @@ fieldset[disabled] .btn {
 .open .dropdown-toggle.btn-default {
   color: #333333;
   background-color: #ebebeb;
-  border-color: #adadad;
+  border-color: #9ca5ab;
 }
 .btn-default:active,
 .btn-default.active,
@@ -1792,7 +1792,7 @@ fieldset[disabled] .btn-default:active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
   background-color: #ffffff;
-  border-color: #cccccc;
+  border-color: #bdc3c7;
 }
 .btn-default .badge {
   color: #ffffff;
@@ -3853,8 +3853,18 @@ header h3 {
 }
 header.inner {
   padding: 15px 0;
-  text-align: center;
   position: relative;
+}
+@media (max-width: 767px) {
+  header.inner {
+    padding: 0;
+  }
+}
+header.inner a {
+  padding: 0;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
 }
 header.inner a:hover {
   text-decoration: none;
@@ -3869,14 +3879,27 @@ header.inner a span {
   color: #BDC3C7;
   font-size: 20px;
 }
+@media (max-width: 767px) {
+  header.inner a {
+    text-align: left;
+    white-space: normal;
+    padding-left: 10px;
+  }
+  header.inner a strong {
+    font-size: 1.3em;
+    line-height: 60px;
+  }
+  header.inner a span {
+    display: none;
+  }
+}
 header.inner button {
   background: transparent;
   font-size: 2em;
-  position: absolute;
-  right: 5%;
   color: #95a5a6;
   border: none;
-  padding: 10px;
+  padding: 10px 0;
+  width: 100%;
 }
 header.inner button:hover {
   color: #3498db;
@@ -3901,8 +3924,105 @@ section p {
   font-size: 20px;
   margin-bottom: 30px;
 }
+section.methods {
+  padding-bottom: 30px;
+}
+section.methods h2 {
+  color: #d35400;
+}
+section.methods p {
+  text-align: center;
+  color: #7f8c8d;
+}
+section.methods .card {
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid #95a5a6;
+  background: #fff;
+  border-radius: 6px;
+  width: 90%;
+  white-space: normal;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  color: #7f8c8d;
+}
+section.methods .card strong {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  font-family: "Lato";
+  display: block;
+  font-size: 18px;
+}
+section.methods .card .fa {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  display: inline-block;
+  font-size: 2.5em;
+  background: #ecf0f1;
+  border-radius: 50%;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: #d35400;
+  margin-top: 30px;
+}
+section.methods .card p {
+  font-size: 15px;
+  color: #a3adad;
+  margin: 0 auto;
+  width: 98%;
+  padding: 10px 0;
+}
+section.methods .card:hover {
+  background: #d35400;
+}
+section.methods .card:hover .fa {
+  margin-top: 18px;
+  font-size: 4.1em;
+  color: #fff;
+  background: none;
+  padding: 10px;
+}
+@media (max-width: 767px) {
+  section.methods .card:hover .fa {
+    margin-top: 0;
+  }
+}
+section.methods .card:hover strong {
+  color: #fff;
+}
+section.methods .card:hover p {
+  color: #ecf0f1;
+}
+@media (max-width: 767px) {
+  section.methods .card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  section.methods .card .fa {
+    margin: 5px 10px 0 0;
+    float: left;
+  }
+  section.methods .card strong {
+    margin-top: 5px;
+    text-align: left;
+  }
+  section.methods .card p {
+    text-align: left;
+  }
+}
 section.me {
   background: url(../images/me.jpg) no-repeat center 25%;
+  padding-bottom: 10px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -3922,6 +4042,22 @@ section.me h2 {
     margin-bottom: 120px;
   }
 }
+section.me a {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  display: inline-block;
+  padding: 8px 18px;
+  font-size: 22px;
+  font-family: "Lato";
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+}
+section.me a:hover {
+  background: #ffffff;
+}
 section.architecture {
   background: url(../images/escheresque.png) repeat;
 }
@@ -3929,21 +4065,39 @@ section.architecture h2 {
   color: #d35400;
   margin-bottom: 15px;
 }
-section.architecture .fa {
-  display: block;
-  width: 95px;
-  height: 95px;
+section.architecture h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+section.architecture a {
+  display: inline-block;
   background: #fff;
-  margin: 10px auto 25px;
-  padding: 20px;
+  padding: 10px 20px;
+  margin: 0 auto 20px;
   color: #d35400;
-  font-size: 55px;
+  font-size: 40px;
   border-radius: 50%;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+section.architecture a:hover {
+  background: #d35400;
+  color: #fff;
 }
 section.architecture p {
   text-align: center;
   font-size: 24px;
   color: #7f8c8d;
+}
+@media (max-width: 767px) {
+  section.architecture .connect h3 {
+    text-align: center;
+  }
+  section.architecture .connect a {
+    margin: 0 28%;
+  }
 }
 section.processes {
   padding: 0 0 30px;
@@ -3963,8 +4117,9 @@ section.processes h2 {
   }
 }
 section.processes .process {
-  width: 100%;
   border: none;
+  border-bottom: 2px solid #95a5a6;
+  width: 100%;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
@@ -3984,6 +4139,7 @@ section.processes .process .fa {
 section.processes .process h3 {
   margin: 0;
   font-weight: bold;
+  font-family: "Lato";
   color: #bdc3c7;
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
@@ -3993,6 +4149,8 @@ section.processes .process h3 {
 section.processes .process:hover,
 section.processes .process.chosen {
   background: #d35400;
+  border: none;
+  border-top: 2px solid #e67e22;
 }
 section.processes .process:hover .fa,
 section.processes .process.chosen .fa {

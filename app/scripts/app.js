@@ -20,6 +20,14 @@ angular.module('portfolioApp', [
         templateUrl: 'views/processes.html',
         controller: 'ProcessesCtrl'
       })
+      .when('/development', {
+        templateUrl: 'views/development.html',
+        controller: 'DevelopmentCtrl'
+      })
+      .when('/leadership', {
+        templateUrl: 'views/leadership.html',
+        controller: 'LeadershipCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

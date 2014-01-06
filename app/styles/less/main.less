@@ -70,10 +70,15 @@ header{
 	}
 	&.inner{
 		padding: 15px 0;
-		text-align:  center;
 		position: relative;
+		@media (max-width: @screen-xs-max) {
+			padding:0;
+		}
 		a{
-
+			padding: 0;
+			text-align:center;
+			margin: 0 auto;
+			display: block;
 			&:hover{
 				text-decoration: none;
 			}
@@ -87,15 +92,26 @@ header{
 				color: #BDC3C7;
 				font-size: 20px;
 			}
+			@media (max-width: @screen-xs-max) {
+				text-align: left;
+				white-space: normal;
+				padding-left: 10px;
+				strong{
+					font-size: 1.3em;
+					line-height: 60px;
+				}
+				span{
+					display: none;
+				}
+			}
 		}
 		button{
 			background: transparent;
 			font-size: 2em;
-			position: absolute;
-			right: 5%;
 			color:@gray;
 			border: none;
-			padding:10px;
+			padding:10px 0;
+			width: 100%;
 			&:hover{
 				color: @peter-river;
 			}
@@ -120,8 +136,92 @@ section{
 		margin-bottom: 30px;
 	}
 
+	&.methods{
+		padding-bottom: 30px;
+		h2{
+			color: @pumpkin;
+		}
+		p{
+			text-align: center;
+			color: @asbestos;
+		}
+		.card{
+			text-align: center;
+			border: none;
+			border-bottom: 2px solid @gray;
+			background: #fff;
+			border-radius: 6px;
+			width: 90%;
+			white-space: normal;
+			.transition(.5s);
+			color:@asbestos;
+			strong{
+				.transition;
+				font-family: "Lato";
+				display: block;
+				font-size: 18px;
+			}
+			.fa{
+				.transition(.2s);
+				display: inline-block;
+				font-size: 2.5em;
+				background: @gray-lighter;
+				border-radius: 50%;
+				padding: 15px; 
+				margin-bottom: 10px;
+				color: @pumpkin;
+				margin-top: 30px;
+			}
+
+			p{
+				font-size: 15px;
+				color: @gray-dark;
+				margin:0 auto;
+				width: 98%;
+				padding: 10px 0;
+			}
+			&:hover{
+				background: @pumpkin;
+				
+				.fa{
+					margin-top:18px;
+					font-size: 4.1em;
+					color: #fff;
+					background: none;
+					padding: 10px;
+					@media (max-width: @screen-xs-max) {
+					margin-top:0;
+					}
+				}
+				strong{
+					color: #fff;
+				}
+				p{
+					color: @gray-lighter;
+				}
+			
+			}
+			@media (max-width: @screen-xs-max) {
+				width: 100%;
+				margin-bottom: 10px;
+				.fa{
+					margin: 5px 10px 0 0;
+					float: left;
+				}
+				strong{
+					margin-top: 5px;
+					text-align: left;
+				}
+				p{
+					text-align: left;
+				}
+			}
+		}
+	}
+
 	&.me{
 		background: url(../images/me.jpg) no-repeat center 25%;
+		padding-bottom: 10px;
 		.cover;
 		h2{
 			text-align: left;
@@ -135,6 +235,21 @@ section{
 				margin-bottom: 120px;
 			}
 		}
+
+		a{
+			background: rgba(255,255,255, .5);
+			border-radius: 6px;
+			display: inline-block;
+			padding: 8px 18px; 
+			font-size: 22px;
+			font-family: "Lato";
+			.transition;
+			text-decoration: none;
+			&:hover{
+				background: rgba(255,255,255, 1);
+			}
+		}
+
 	}
 	&.architecture{
 		background: url(../images/escheresque.png) repeat;
@@ -143,21 +258,38 @@ section{
 			color: @pumpkin;
 			margin-bottom: 15px;
 		}
-		.fa{
-			display: block;
-			width: 95px;
-			height: 95px;
+		h2{
+			margin-bottom: 15px;
+			text-align: center;
+		}
+		a{
+			display: inline-block;
 			background: #fff;
-			margin: 10px auto 25px;
-			padding: 20px;
+			padding:10px 20px;
+			margin: 0 auto 20px;
 			color: @pumpkin;
-			font-size: 55px;
+			font-size: 40px;
 			border-radius:50%;
+			.transition;
+			&:hover{
+				background: @pumpkin;
+				color:#fff;
+			}
 		}
 		p{
 			text-align: center;
 			font-size: 24px;
 			color: @asbestos;
+		}
+		.connect{
+			@media (max-width: @screen-xs-max) {
+				h3{ 
+					text-align: center;
+				}
+				a{
+					margin: 0 28%;
+				}
+			}
 		}
 	}
 	&.processes{
@@ -177,8 +309,9 @@ section{
 			}
 		}
 		.process{
-			width: 100%;
 			border: none;
+			border-bottom: 2px solid @gray;
+			width: 100%;
 			.transition(.2s, ease-out);
 			.fa{
 				display: block;
@@ -191,11 +324,14 @@ section{
 			h3{
 				margin: 0;
 				font-weight: bold;
+				font-family: "Lato";
 				color: @gray-light;
 				.transition(.5s, ease-out);
 			}
 			&:hover, &.chosen{
 				background: @pumpkin;
+				border:none;
+				border-top: 2px-solid @carrot; 
 				.fa{
 					color: #fff;
 				}
