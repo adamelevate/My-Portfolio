@@ -706,7 +706,7 @@
   }
 }
 .make-md-column-push(@columns) {
-  @media (min-width: @screen-md) {
+  @media (min-width: @screen-md-min) {
     left: percentage((@columns / @grid-columns));
   }
 }
@@ -850,6 +850,10 @@
     color: @text-color;
     border-color: @border-color;
     background-color: @background-color;
+  }
+  // Optional feedack icon
+  .form-control-feedback {
+    color: @text-color;
   }
 }
 

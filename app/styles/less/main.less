@@ -302,9 +302,11 @@ section{
 			.col-xs-3{
 				padding:0; 
 				button{
-					width: 75px;
+					width: 90%;
 					display: block;
 					margin: 0 auto;
+					padding-left:0;
+					padding-right:0;
 				}
 			}
 		}
@@ -312,6 +314,7 @@ section{
 			border: none;
 			border-bottom: 2px solid @gray;
 			width: 100%;
+
 			.transition(.2s, ease-out);
 			.fa{
 				display: block;
@@ -363,8 +366,8 @@ section{
 		.wrapper{
 			background: rgba(255,255,255, .5);
 			border-radius: 6px;
-			padding: 10px 5%;
-			margin: 15px;
+			padding: 10px 0;
+			margin: 15px 0;
 			@media (max-width: @screen-sm-max) {
 					margin:0;
 			}
@@ -395,6 +398,9 @@ section{
 						text-align: center;
 						line-height: 80px;
 						font-size: 45px;
+						@media (max-width: @screen-sm-max) {
+							left: 10%;
+						}
 					}
 			}
 			img{
@@ -420,22 +426,22 @@ section{
 				}
 			}
 		}
-		@media (max-width: @screen-sm-max) {
-			.row > div{
-				padding: 0;
-				margin: 0;
-			}
-		}
 		h3{
 			color: #555;
 			font-family: "Lato";
 			font-weight: 400;
 			font-size: 2.5em;
 			text-align: center;
+			width: 96%;
+			margin-right:auto;
+			margin-left:auto;
 		}
 		p{
 			color: @asbestos;
 			text-align: center;
+			width: 96%;
+			margin-right:auto;
+			margin-left:auto;
 		}
 
 	}

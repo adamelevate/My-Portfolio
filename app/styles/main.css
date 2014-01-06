@@ -4111,9 +4111,11 @@ section.processes h2 {
     padding: 0;
   }
   section.processes .col-xs-3 button {
-    width: 75px;
+    width: 90%;
     display: block;
     margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 section.processes .process {
@@ -4180,8 +4182,8 @@ section.processes .process.chosen h3 {
 .process-detail .wrapper {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 6px;
-  padding: 10px 5%;
-  margin: 15px;
+  padding: 10px 0;
+  margin: 15px 0;
 }
 @media (max-width: 991px) {
   .process-detail .wrapper {
@@ -4215,6 +4217,11 @@ section.processes .process.chosen h3 {
   line-height: 80px;
   font-size: 45px;
 }
+@media (max-width: 991px) {
+  .process-detail .story .mobile-wrapper .resize {
+    left: 10%;
+  }
+}
 .process-detail .story img {
   width: 100%;
 }
@@ -4239,20 +4246,20 @@ section.processes .process.chosen h3 {
     margin: 15px auto;
   }
 }
-@media (max-width: 991px) {
-  .process-detail .row > div {
-    padding: 0;
-    margin: 0;
-  }
-}
 .process-detail h3 {
   color: #555;
   font-family: "Lato";
   font-weight: 400;
   font-size: 2.5em;
   text-align: center;
+  width: 96%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .process-detail p {
   color: #7f8c8d;
   text-align: center;
+  width: 96%;
+  margin-right: auto;
+  margin-left: auto;
 }

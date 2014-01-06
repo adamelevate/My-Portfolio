@@ -11,7 +11,6 @@ angular.module('portfolioApp')
 
 		$scope.viewFullscreen = function(e){
 			$window.open(e.currentTarget.attributes[2].nodeValue, '_blank');
-
 		};
 
 		$scope.processes = [{
@@ -45,7 +44,7 @@ angular.module('portfolioApp')
 			else{
 				returnImage = attrs.srcDesktop;
 			}
-			element.parent().attr('data-src', returnImage)
+			element.parent().attr('data-src', attrs.srcDesktop);
 			element.attr('src', returnImage).addClass('lazy-loaded');
 		};
 	});
