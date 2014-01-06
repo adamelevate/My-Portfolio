@@ -3972,7 +3972,7 @@ header.inner a strong {
 }
 header.inner a span {
   color: #BDC3C7;
-  font-size: 20px;
+  font-size: 18px;
 }
 @media (max-width: 767px) {
   header.inner a {
