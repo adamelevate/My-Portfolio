@@ -244,26 +244,22 @@ section{
 				font-family: "Lato";
 			}
 			.mobile-wrapper{
+				position: relative;
 				.resize{
 					display: none;
-				}
-				@media (max-width: @screen-xs-max) {
-					position: relative;
-					.resize{
 						position: absolute;
-						color: @peter-river;
-						text-shadow: 1px 1px 0 #000;
+						color: @pumpkin;
+						text-shadow: -1px -1px 0 lighten(@pumpkin, 15%);
 						height: 80px;
 						width: 80px;
 						display: block;
-						right: 12%;
+						left: 0;
 						bottom: 0;
 						background: rgba(0,0,0,.5);
 						text-align: center;
 						line-height: 80px;
 						font-size: 45px;
 					}
-				}
 			}
 			img{
 				width: 100%;

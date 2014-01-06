@@ -4039,27 +4039,23 @@ section.processes .process.chosen h3 {
   color: #d35400;
   font-family: "Lato";
 }
+.process-detail .story .mobile-wrapper {
+  position: relative;
+}
 .process-detail .story .mobile-wrapper .resize {
   display: none;
-}
-@media (max-width: 767px) {
-  .process-detail .story .mobile-wrapper {
-    position: relative;
-  }
-  .process-detail .story .mobile-wrapper .resize {
-    position: absolute;
-    color: #3498db;
-    text-shadow: 1px 1px 0 #000;
-    height: 80px;
-    width: 80px;
-    display: block;
-    right: 12%;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    line-height: 80px;
-    font-size: 45px;
-  }
+  position: absolute;
+  color: #d35400;
+  text-shadow: -1px -1px 0 #ff7921;
+  height: 80px;
+  width: 80px;
+  display: block;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 80px;
+  font-size: 45px;
 }
 .process-detail .story img {
   width: 100%;

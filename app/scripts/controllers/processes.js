@@ -10,7 +10,7 @@ angular.module('portfolioApp')
 		};
 
 		$scope.viewFullscreen = function(e){
-			$window.location = e.target.attributes[2].nodeValue;
+			$window.open(e.currentTarget.attributes[2].nodeValue, '_blank');
 
 		};
 
@@ -26,7 +26,7 @@ angular.module('portfolioApp')
 			story: 'views/processes/paths.html'
 		}, {
 			title: 'Behaviors',
-			description: 'Planning for what customers can and might do encourages them to keep using your product knowing you\'re totally helping them.',
+			description: 'Planning for what customers can do will keep them using your product.',
 			icon: 'fa-code-fork',
 			story: 'views/processes/behaviors.html'
 		}, {
@@ -38,12 +38,14 @@ angular.module('portfolioApp')
 
 	}).directive('lazyLoad', function(){
 		return function(scope, element, attrs){
+			var returnImage = '';
 			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-				element.attr('src', attrs.srcMobile);
+				returnImage = attrs.srcMobile;
 			}
 			else{
-				element.attr('src', attrs.srcDesktop);
+				returnImage = attrs.srcDesktop;
 			}
-				element.addClass('lazy-loaded');
+			element.parent().attr('data-src', returnImage)
+			element.attr('src', returnImage).addClass('lazy-loaded');
 		};
 	});
