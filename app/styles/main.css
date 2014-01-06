@@ -4003,7 +4003,7 @@ section {
   padding-top: 30px;
 }
 section h2 {
-  color: #fff;
+  color: #d35400;
   font-family: "cartonslab";
   font-size: 45px;
   margin-bottom: 0;
@@ -4126,6 +4126,7 @@ section.me {
 }
 section.me h2 {
   text-align: left;
+  color: #fff;
 }
 @media (max-width: 767px) {
   section.me {
