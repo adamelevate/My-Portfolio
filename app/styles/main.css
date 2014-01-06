@@ -3999,6 +3999,9 @@ header.inner button {
 header.inner button:hover {
   color: #3498db;
 }
+header.inner.active {
+  background: #3498db;
+}
 section {
   padding-top: 30px;
 }
@@ -4270,6 +4273,84 @@ section.processes .process.chosen h3 {
     height: 50px;
     padding: 10px 0;
   }
+}
+section.development .icons {
+  font-size: 6em;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+section.development .icons span {
+  text-align: center;
+  display: inline-block;
+  width: 30%;
+}
+@media (max-width: 767px) {
+  section.development .icons span {
+    display: none;
+  }
+}
+section.development h3 {
+  color: #d35400;
+  text-align: center;
+  font-size: 28px;
+  font-family: "Lato";
+}
+section.development p {
+  color: #7f8c8d;
+  text-align: center;
+}
+section.development a.tech {
+  display: block;
+  border: 1px solid #bdc3c7;
+  border-bottom: 2px solid #bdc3c7;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  white-space: normal;
+  margin-bottom: 15px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  color: #7f8c8d;
+}
+section.development a.tech:hover {
+  text-decoration: none;
+}
+section.development a.tech .logo {
+  max-height: 87px;
+  padding: 10px 0;
+}
+section.development a.tech .logo img {
+  margin: 0 auto;
+  display: block;
+  max-height: 67px;
+  max-width: 86%;
+}
+section.development a.tech .text {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background: #fff;
+  text-align: center;
+  width: 99%;
+  margin: 0 auto;
+  padding: 1px 0;
+  color: #7f8c8d;
+  border-radius: 0 0 4px 4px;
+}
+section.development a.tech .text h3 {
+  font-size: 22px;
+  font-family: "Lato";
+}
+section.development a.tech .text p {
+  color: #bdc3c7;
+  font-size: 16px;
+  margin: 0;
+  padding-bottom: 10px;
 }
 .process-detail {
   margin-top: 30px;

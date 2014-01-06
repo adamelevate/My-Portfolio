@@ -4,8 +4,33 @@
 	<section class="development">
 		<h2>Development</h2>
 		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
-				dajshd kjashdkj
+			<div class="col-sm-6 col-sm-offset-3">
+				<p>I learned to code out of necessity. You see, back in the day, "UX" wasn't really an acknowledged thing. Now, I actually really enjoy it and feel like it greatly benefits my skillset.</p>
+				<div class="icons">
+					<span class="fa fa-html5"></span>
+					<span class="fa fa-css3"></span>
+					<span class="js">JS</span>
+				</div>
+				<p>I even built this site, check out my repo: <br><br>
+					<a class="btn btn-primary btn-lg" href="https://github.com/adamelevate/My-Portfolio">
+					<span class="fa fa-github"></span> My Portfolio
+				</a></p>
+	
+			</div>
+		</div>
+		<hr>
+		<h3>My Tools</h3>
+		<div class="row">
+			<div class="col-sm-4" ng-repeat="tech in technology">
+				<a class="tech" href="{{tech.url}}" target="_blank">
+					<div class="logo">
+						<img src="images/logos/{{tech.logo}}"/>
+					</div>
+					<div class="text">
+						<h3>{{tech.name}}</h3>
+						<p>{{tech.description}}</p>
+					</div>
+				</a>
 			</div>
 		</div>
 	</section>
