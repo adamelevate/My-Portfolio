@@ -1,15 +1,47 @@
-<div class="container">
-	<div class="row">
-		<div class="col-sm-6 col-sm-offset-3 col-xs-9">
-			<a class="btn btn-link" href="/">
-				<strong>Adam Lorentzen</strong>
-				<span>Connecting people through authentic interactions</span>
-			</a>
-		</div>
-		<div class="col-sm-3 col-xs-3">
-			<button class="" id="showMenu">
-				<span class="fa fa-bars"></span>
-			</button>
+<div class="wrap" ng-class="{'active':(active)}">
+	<div class="container">
+		<div class="row" ng-init="active = false">
+			<div class="col-sm-6 col-sm-offset-3 col-xs-10">
+				<a class="btn btn-link" href="/">
+					<strong>Adam Lorentzen</strong>
+					<span>Connecting people through authentic interactions</span>
+				</a>
+			<div class="row navigation">
+				<div class="col-xs-3">
+					<a href="#/">
+						<span class="fa fa-home"></span>
+						<div>Home</div>
+					</a>
+				</div>
+				<div class="col-xs-3">
+					<a href="#/leadership">
+						<span class="fa fa-users"></span>
+						<div>Leadership</div>
+					</a>
+				</div>
+				<div class="col-xs-3">
+					<a href="#/processes">
+						<span class="fa fa-road"></span>
+						<div>Ux Processes</div>
+					</a>
+				</div>
+				<div class="col-xs-3">
+					<a href="#/development">
+						<span class="fa fa-laptop"></span>
+						<div>Development</div>
+					</a>
+				</div>
+			</div>
+
+			</div>
+			<div class="col-sm-3 col-xs-2">
+				<button class="" id="showMenu" ng-click="active = true" ng-hide="active == true">
+					<span class="fa fa-bars"></span>
+				</button>
+				<button class="" id="showMenu" ng-click="active = false" ng-hide="active == false">
+					<span class="fa fa-times"></span>
+				</button>
+			</div>
 		</div>
 	</div>
 </div>

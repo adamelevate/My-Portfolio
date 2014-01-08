@@ -26,7 +26,7 @@ angular.module('portfolioApp')
 			logo:'bower-logo.png'},
 		{name:'Less',
 			url:'http://lesscss.org/',
-			description:'They Less is more, and it\'s true. I can\'t go back to writing css the old way ever again.',
+			description:'They say Less is more, and it\'s true. I can\'t go back to writing css the old way ever again.',
 			logo:'less.png'}
 	];
 

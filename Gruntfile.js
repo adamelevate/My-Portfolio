@@ -26,6 +26,9 @@ module.exports = function (grunt) {
     },
     less: {
       development: {
+        options:{
+          paths: "app/styles"
+        },
         files: {
           './app/styles/main.css': ['./app/styles/less/main.less']
         }
@@ -275,6 +278,14 @@ module.exports = function (grunt) {
           src: ['generated/*']
         }]
       },
+      font_awesome: {
+        files:[
+          {expand: true,
+          cwd: '<%= yeoman.app %>/bower_components/font-awesome/fonts',
+          dest: '<%= yeoman.app %>/fonts',
+          src: ['*.eot', '*.svg', '*.ttf', '*.woff', '*.otf']
+          }]
+      },
       styles: {
         expand: true,
         cwd: '<%= yeoman.app %>/styles',
@@ -292,8 +303,9 @@ module.exports = function (grunt) {
         'copy:styles'
       ],
       dist: [
+
         'copy:styles',
-        'imagemin',
+        //'imagemin',
         'svgmin'
       ]
     },

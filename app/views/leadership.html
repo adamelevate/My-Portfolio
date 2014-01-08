@@ -4,20 +4,42 @@
 	<section class="leadership">
 		<h2>Leadership</h2>
 		<div class="row">
-			<div class="col-sm-5">
-				pic
-			</div>
-			<div class="col-sm-7">
-				ltext
+			<div class="col-sm-8 col-sm-offset-2">
+				<p>I am passionate about helping people.  Sometimes people who need help don't know their situation can actually be improved. That's where I come in. </p>
+
+				<p>I've always been very empathetic. I can understand people, put myself in their shoes and work out their position from their perspective. I'm not psychic, I'm just observant. I believe that helping people is the only thing in life that is truly rewarding.</p>
+
+				<p>I love problem solving, that's why I wake up everyday. Since no person can do anything great alone, I tend to find other passionate people who share the cause. I love inspiring those around me to do something meaningful and worthwhile.</p>
+
+				<p>I'm a huge fan of Simon Sinek's <a href="http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action.html">"Why, How, What"</a> TED talk. I have always thought about life this way, asking why for everything. I've learned so much just asking the simple question: "Why?". I happen to be interested in how everything works, and when dealing with any problem, I work through it in this manner.</p>
 			</div>
 		</div>
+		<hr>
+			<h3>My Guiding Principles</h3>
+			<p>I have some phrases that keep me level-headed and focused on doing what I do best.</p>
+			<ul class="list-group">	
+				<li class="list-group-item">Do the right thing, it's never too late.</li>
+				<li class="list-group-item">Always know why. How else will you know what to do?</li>
+				<li class="list-group-item">Work with people who care.</li>
+				<li class="list-group-item">Think before you act, it matters.</li>
+				<li class="list-group-item">Too Easy? You might have missed something.</li>
+				<li class="list-group-item">Too Hard? You might be doing it wrong.</li>
+				<li class="list-group-item">Everyone works for you, so ask for their support.</li>
+				<li class="list-group-item">You work for everyone, so ask if they need support.</li>
+				<li class="list-group-item">Nothing is beneath you, every job is important.</li>
+			</ul>
+		<hr>
+		<h3>Read Some Books!</h3>
+		<p>There are some things life can't teach you, that's when I turn to a great book. Apart from curiosity and failure, reading has exposed me to the awesome world of other people's ideas. </p>
 		<div class="row">
-			<div class="col-sm-7">
-				pic
-			</div>
-			<div class="col-sm-5">
-				ltext
-			</div>
+				<div class="col-sm-4" ng-repeat="book in books">
+					<a href="{{book.url}}" class="book">
+						<div class="cover">
+							<img src="images/books/{{book.cover}}">
+						</div>
+						<span class="fa fa-external-link"></span> {{book.title}}
+					</a>
+				</div>
 		</div>
 	</section>
 </div>
