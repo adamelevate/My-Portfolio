@@ -5349,6 +5349,9 @@ header.inner .wrap.active .navigation a {
   margin-top: 0;
   opacity: 1;
 }
+header.inner .wrap.active .navigation a.active {
+  color: #409ad5;
+}
 header.inner .wrap.active .btn {
   margin-top: 65px;
   opacity: 0;
@@ -5413,6 +5416,49 @@ header.inner .wrap button:hover {
 }
 header.inner .wrap.active {
   background: #3498db;
+}
+.item {
+  display: block;
+  border: 1px solid #bdc3c7;
+  border-bottom: 2px solid #bdc3c7;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  white-space: normal;
+  margin-bottom: 15px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  color: #7f8c8d;
+}
+.item:hover {
+  text-decoration: none;
+  background: #7f8c8d;
+}
+.item .text {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background: #fff;
+  text-align: center;
+  width: 99%;
+  margin: 0 auto;
+  padding: 1px 0;
+  color: #7f8c8d;
+  border-radius: 0 0 4px 4px;
+}
+.item .text h3 {
+  font-size: 22px;
+  font-family: "Lato";
+}
+.item .text p {
+  color: #bdc3c7;
+  font-size: 16px;
+  margin: 0;
+  padding-bottom: 10px;
 }
 section {
   padding-top: 30px;
@@ -5740,16 +5786,6 @@ section.development a.tech:hover {
   text-decoration: none;
   background: #7f8c8d;
 }
-section.development a.tech .logo {
-  max-height: 87px;
-  padding: 10px 0;
-}
-section.development a.tech .logo img {
-  margin: 0 auto;
-  display: block;
-  max-height: 67px;
-  max-width: 86%;
-}
 section.development a.tech .text {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -5773,6 +5809,45 @@ section.development a.tech .text p {
   margin: 0;
   padding-bottom: 10px;
 }
+section.development a.tech .logo {
+  max-height: 87px;
+  padding: 10px 0;
+}
+section.development a.tech .logo img {
+  margin: 0 auto;
+  display: block;
+  max-height: 67px;
+  max-width: 86%;
+}
+section.leadership {
+  /*
+		.book{
+			background: rgba(255,255,255,.5);
+			color: @asbestos;
+			display: block;
+			padding:10px 0;
+			height: 218px;
+			margin-bottom: 15px;
+			text-align: center;
+			border: 1px solid @gray-light;
+			border-bottom: 2px solid @gray-light;
+			border-radius: 6px;
+			.transition;
+			&:hover{
+				background: #fff;
+				text-decoration: none;
+			}
+			.cover{
+				margin: 10px auto;
+				img{
+					margin: 0 auto;
+					display: block;
+					max-height: 112px;
+				}
+			}
+		}
+		*/
+}
 section.leadership h3 {
   text-align: center;
 }
@@ -5793,24 +5868,50 @@ section.leadership ul {
   }
 }
 section.leadership .book {
-  background: rgba(255, 255, 255, 0.5);
-  color: #7f8c8d;
   display: block;
-  padding: 10px 0;
-  height: 218px;
-  margin-bottom: 15px;
-  text-align: center;
   border: 1px solid #bdc3c7;
   border-bottom: 2px solid #bdc3c7;
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 6px;
+  white-space: normal;
+  margin-bottom: 15px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  color: #7f8c8d;
+}
+section.leadership .book:hover {
+  text-decoration: none;
+  background: #7f8c8d;
+}
+section.leadership .book .text {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-}
-section.leadership .book:hover {
   background: #fff;
-  text-decoration: none;
+  text-align: center;
+  width: 99%;
+  margin: 0 auto;
+  padding: 1px 0;
+  color: #7f8c8d;
+  border-radius: 0 0 4px 4px;
+}
+section.leadership .book .text h3 {
+  font-size: 22px;
+  font-family: "Lato";
+}
+section.leadership .book .text p {
+  color: #bdc3c7;
+  font-size: 16px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+section.leadership .book p {
+  min-height: 76px;
 }
 section.leadership .book .cover {
   margin: 10px auto;
@@ -5818,7 +5919,7 @@ section.leadership .book .cover {
 section.leadership .book .cover img {
   margin: 0 auto;
   display: block;
-  max-height: 112px;
+  height: 112px;
 }
 .process-detail {
   margin-top: 30px;

@@ -117,6 +117,9 @@ header{
 					a{
 						margin-top: 0;
 						opacity: 1;
+						&.active{
+							color: lighten(@belize-hole,10%)
+;						}
 					}
 				}
 				.btn{
@@ -183,6 +186,43 @@ header{
 		}
 	}
 }
+
+.item{
+	display: block;
+	border: 1px solid @gray-light;
+	border-bottom: 2px solid @gray-light;
+	background: rgba(255,255,255,.5);
+	border-radius: 6px;
+	white-space: normal;
+	margin-bottom: 15px;
+	.transition(.5s);
+	color:@asbestos;
+		&:hover{
+			text-decoration: none;
+			background: @asbestos;
+		}
+	.text{
+		.transition;
+		background: #fff;
+		text-align: center;
+		width: 99%;
+		margin: 0 auto;
+		padding: 1px 0;
+		color: @asbestos;
+		border-radius: 0 0 4px 4px;
+		h3{
+			font-size: 22px;
+			font-family: "Lato";
+		}
+		p{
+			color: @gray-light;
+			font-size: 16px;
+			margin: 0; padding-bottom: 10px;
+		}
+	}
+}
+
+
 section{
 	padding-top: 30px;
 	h2{
@@ -456,19 +496,7 @@ section{
 			text-align: center;
 		}
 		a.tech{
-			display: block;
-			border: 1px solid @gray-light;
-			border-bottom: 2px solid @gray-light;
-			background: rgba(255,255,255,.5);
-			border-radius: 6px;
-			white-space: normal;
-			margin-bottom: 15px;
-			.transition(.5s);
-			color:@asbestos;
-			&:hover{
-				text-decoration: none;
-				background: @asbestos;
-			}
+			.item;
 			.logo{
 				max-height: 87px;
 				padding: 10px 0;
@@ -480,25 +508,7 @@ section{
 					max-width: 86%;
 				}
 			}
-			.text{
-				.transition;
-				background: #fff;
-				text-align: center;
-				width: 99%;
-				margin: 0 auto;
-				padding: 1px 0;
-				color: @asbestos;
-				border-radius: 0 0 4px 4px;
-				h3{
-					font-size: 22px;
-					font-family: "Lato";
-				}
-				p{
-					color: @gray-light;
-					font-size: 16px;
-					margin: 0; padding-bottom: 10px;
-				}
-			}
+
 		}
 	}
 	&.leadership{
@@ -519,6 +529,21 @@ section{
 				width: 90%;
 			}
 		}
+		.book{
+			.item;
+			p{
+				min-height: 76px;
+			}
+			.cover{
+				margin: 10px auto;
+				img{
+					margin: 0 auto;
+					display: block;
+					height: 112px;
+				}
+			}
+		}
+		/*
 		.book{
 			background: rgba(255,255,255,.5);
 			color: @asbestos;
@@ -544,6 +569,7 @@ section{
 				}
 			}
 		}
+		*/
 	}
 }
 
