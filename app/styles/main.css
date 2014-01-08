@@ -5621,11 +5621,7 @@ section.architecture p {
     margin: 0 28%;
   }
 }
-section.processes {
-  padding: 0 0 30px;
-}
 section.processes h2 {
-  color: #d35400;
   margin-bottom: 15px;
 }
 @media (max-width: 767px) {
@@ -5804,6 +5800,17 @@ section.leadership .book {
   height: 218px;
   margin-bottom: 15px;
   text-align: center;
+  border: 1px solid #bdc3c7;
+  border-bottom: 2px solid #bdc3c7;
+  border-radius: 6px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+section.leadership .book:hover {
+  background: #fff;
+  text-decoration: none;
 }
 section.leadership .book .cover {
   margin: 10px auto;
