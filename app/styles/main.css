@@ -5349,8 +5349,25 @@ header.inner .wrap.active .navigation a {
   margin-top: 0;
   opacity: 1;
 }
+header.inner .wrap.active .navigation a:after {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  content: "";
+  display: block;
+  border-radius: 3px;
+  border: 3px solid #fff;
+  opacity: 0;
+  width: 10px;
+  margin: 0 auto;
+}
+header.inner .wrap.active .navigation a:hover:after {
+  opacity: 1;
+  width: 98%;
+}
 header.inner .wrap.active .navigation a.active {
-  color: #409ad5;
+  color: #20638f;
 }
 header.inner .wrap.active .btn {
   margin-top: 65px;

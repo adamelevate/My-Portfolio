@@ -6,32 +6,14 @@
 					<strong>Adam Lorentzen</strong>
 					<span>Connecting people through authentic interactions</span>
 				</a>
-			<div class="row navigation">
-				<div class="col-xs-3">
-					<a href="#/">
-						<span class="fa fa-home"></span>
-						<div>Home</div>
-					</a>
+				<div class="row navigation" ng-controller="navCtrl">
+					<div class="col-xs-3" ng-repeat="link in links">
+						<a href="#/{{link.title}}" ng-class="navClass('{{link.title}}')">
+							<span class="fa {{link.icon}}"></span>
+							<div>{{link.text}}</div>
+						</a>
+					</div>
 				</div>
-				<div class="col-xs-3">
-					<a href="#/leadership">
-						<span class="fa fa-users"></span>
-						<div>Leadership</div>
-					</a>
-				</div>
-				<div class="col-xs-3">
-					<a href="#/processes">
-						<span class="fa fa-road"></span>
-						<div>Ux Processes</div>
-					</a>
-				</div>
-				<div class="col-xs-3">
-					<a href="#/development">
-						<span class="fa fa-laptop"></span>
-						<div>Development</div>
-					</a>
-				</div>
-			</div>
 
 			</div>
 			<div class="col-sm-3 col-xs-2">
