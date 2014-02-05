@@ -24,7 +24,7 @@ angular.module('portfolioApp')
 		$scope.navClass = function (page) {
 			var currentRoute = $location.path().substring(1) || 'home';
 			console.log(currentRoute)
-			return page === currentRoute ? 'active' : 'fuckoff';
+			return page === currentRoute ? 'active' : 'nothing';
 		};
 
 	console.log($scope.links);
