@@ -100,9 +100,16 @@ header{
 					}
 					div{
 						font-size: 14px;
+						@media (max-width: @screen-sm-max) {
+							font-size: 12px;
+							span{
+								display: none;
+							}
+						}
 						@media (max-width: @screen-xs-max) {
 							display: none;
 						}
+
 					}
 					&:hover{
 						color:#fff;
@@ -112,6 +119,10 @@ header{
 			}
 			&.active{
 				background: @belize-hole;
+				.col-sm-6{
+					width: 75%;
+					margin-left: 0;
+				}
 				.navigation{
 					height: auto;
 					a{
@@ -281,6 +292,7 @@ section{
 			white-space: normal;
 			.transition(.5s);
 			color:@asbestos;
+			min-height: 230px;
 			strong{
 				.transition;
 				font-family: "Lato";
@@ -330,6 +342,7 @@ section{
 			@media (max-width: @screen-xs-max) {
 				width: 100%;
 				margin-bottom: 10px;
+				min-height: 85px;
 				.fa{
 					margin: 5px 10px 0 0;
 					float: left;
@@ -340,6 +353,7 @@ section{
 				}
 				p{
 					text-align: left;
+					margin-left: 58px;
 				}
 			}
 		}
@@ -513,6 +527,10 @@ section{
 		}
 		a.tech{
 			.item;
+			min-height: 230px;
+			@media (max-width: @screen-xs-max) {
+				min-height: 180px;
+			}
 			.logo{
 				max-height: 87px;
 				padding: 10px 0;

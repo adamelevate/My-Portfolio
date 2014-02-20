@@ -5330,6 +5330,14 @@ header.inner .wrap .navigation a {
 header.inner .wrap .navigation a div {
   font-size: 14px;
 }
+@media (max-width: 991px) {
+  header.inner .wrap .navigation a div {
+    font-size: 12px;
+  }
+  header.inner .wrap .navigation a div span {
+    display: none;
+  }
+}
 @media (max-width: 767px) {
   header.inner .wrap .navigation a div {
     display: none;
@@ -5341,6 +5349,10 @@ header.inner .wrap .navigation a:hover {
 }
 header.inner .wrap.active {
   background: #2980b9;
+}
+header.inner .wrap.active .col-sm-6 {
+  width: 75%;
+  margin-left: 0;
 }
 header.inner .wrap.active .navigation {
   height: auto;
@@ -5530,6 +5542,7 @@ section.methods .card {
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   color: #7f8c8d;
+  min-height: 230px;
 }
 section.methods .card strong {
   -webkit-transition: all 0.2s ease-out;
@@ -5588,6 +5601,7 @@ section.methods .card:hover p {
   section.methods .card {
     width: 100%;
     margin-bottom: 10px;
+    min-height: 85px;
   }
   section.methods .card .fa {
     margin: 5px 10px 0 0;
@@ -5599,6 +5613,7 @@ section.methods .card:hover p {
   }
   section.methods .card p {
     text-align: left;
+    margin-left: 58px;
   }
 }
 section.me {
@@ -5798,6 +5813,7 @@ section.development a.tech {
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   color: #7f8c8d;
+  min-height: 230px;
 }
 section.development a.tech:hover {
   text-decoration: none;
@@ -5825,6 +5841,11 @@ section.development a.tech .text p {
   font-size: 16px;
   margin: 0;
   padding-bottom: 10px;
+}
+@media (max-width: 767px) {
+  section.development a.tech {
+    min-height: 180px;
+  }
 }
 section.development a.tech .logo {
   max-height: 87px;
